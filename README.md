@@ -5,9 +5,9 @@ Text representation of numbers in spanish
 
 Usage
 ---
-Use __com.josketres.spanishnumbers.SpanishNumbers__ to get a String with the name of a given number.
+Use `SpanishNumbers` to get a String with the name of a given number.
 ```java
-System.out.println(SpanishNumbers.cardinal(199)); // "ciento noventa y nueve"
+System.out.println(com.josketres.spanishnumbers.SpanishNumbers.cardinal(199)); // "ciento noventa y nueve"
 ```
 
 License
