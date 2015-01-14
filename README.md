@@ -3,6 +3,12 @@ Text representation of numbers in spanish
 
 [![Build Status](https://travis-ci.org/josketres/spanish-numbers.svg?branch=master)](https://travis-ci.org/josketres/spanish-numbers)
 
+Usage
+---
+Use __com.josketres.spanishnumbers.SpanishNumbers__ to get a String with the name of a given number.
+```java
+System.out.println(SpanishNumbers.cardinal(199)); // "ciento noventa y nueve"
+```
 
 License
 -------
