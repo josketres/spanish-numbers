@@ -7,7 +7,8 @@ Usage
 ---
 Use `SpanishNumbers` to get a String with the name of a given number.
 ```java
-System.out.println(com.josketres.spanishnumbers.SpanishNumbers.cardinal(199)); // "ciento noventa y nueve"
+// prints "ciento noventa y nueve"
+System.out.println(com.josketres.spanishnumbers.SpanishNumbers.cardinal(199));
 ```
 
 License
