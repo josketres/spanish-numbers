@@ -4,7 +4,7 @@ public class FirstPeriodFormat {
 
     private static final String[] UNIT = {"cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"};
     private static final String[] TENS = {"diez", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"};
-    private static final String[] CENTS = {"cien", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos", "ochocientos", "novecientos"};
+    private static final String[] CENTS = {"ciento", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos", "ochocientos", "novecientos"};
     private static final String[] TWO_DIGITS_CARDINAL_11_TO_29 = {"once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve"};
     private static final String[] TWENTIES = {"veintiuno", "veintidós", "veintitrés", "veinticuatro", "veinticinco", "veintiséis", "veintisiete", "veintiocho", "veintinueve"};
 
@@ -13,7 +13,7 @@ public class FirstPeriodFormat {
     private final int cents;
 
     public FirstPeriodFormat(long number) {
-        
+
         units = (int) number % 10;
         tens = (int) (number / 10) % 10;
         cents = (int) (number / 100) % 10;
@@ -28,12 +28,10 @@ public class FirstPeriodFormat {
         if (cents == 0) {
             return "";
         } else if (cents == 1 && tens == 0 && units == 0) {
-            return CENTS[cents - 1];
-        } else if (cents == 1 && (tens != 0 || units != 0)) {
-            return "ciento ";
+            return "cien";
+        } else {
+            return CENTS[cents - 1] + ((tens != 0 || units != 0) ? " " : "");
         }
-
-        return "";
     }
 
     private String formatTens() {

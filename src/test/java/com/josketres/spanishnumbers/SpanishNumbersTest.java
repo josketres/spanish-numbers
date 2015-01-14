@@ -70,7 +70,7 @@ public class SpanishNumbersTest {
     }
 
     @Test
-    public void test_cardinal_three_digits_numbers_100_to_109() {
+    public void test_cardinal_numbers_100_to_109() {
 
         assertThat(SpanishNumbers.cardinal(100), equalTo("cien"));
         assertThat(SpanishNumbers.cardinal(101), equalTo("ciento uno"));
@@ -85,7 +85,7 @@ public class SpanishNumbersTest {
     }
 
     @Test
-    public void test_cardinal_three_digits_numbers_110_to_199() {
+    public void test_cardinal_numbers_110_to_199() {
 
         assertThat(SpanishNumbers.cardinal(110), equalTo("ciento diez"));
         assertThat(SpanishNumbers.cardinal(111), equalTo("ciento once"));
@@ -97,5 +97,25 @@ public class SpanishNumbersTest {
         assertThat(SpanishNumbers.cardinal(150), equalTo("ciento cincuenta"));
         assertThat(SpanishNumbers.cardinal(180), equalTo("ciento ochenta"));
         assertThat(SpanishNumbers.cardinal(199), equalTo("ciento noventa y nueve"));
+    }
+
+    @Test
+    public void test_cardinal_numbers_200_to_299() {
+
+        assertThat(SpanishNumbers.cardinal(200), equalTo("doscientos"));
+        assertThat(SpanishNumbers.cardinal(201), equalTo("doscientos uno"));
+        assertThat(SpanishNumbers.cardinal(210), equalTo("doscientos diez"));
+        assertThat(SpanishNumbers.cardinal(221), equalTo("doscientos veintiuno"));
+        assertThat(SpanishNumbers.cardinal(299), equalTo("doscientos noventa y nueve"));
+    }
+
+    @Test
+    public void test_cardinal_numbers_300_to_999() {
+
+        assertThat(SpanishNumbers.cardinal(300), equalTo("trescientos"));
+        assertThat(SpanishNumbers.cardinal(401), equalTo("cuatrocientos uno"));
+        assertThat(SpanishNumbers.cardinal(510), equalTo("quinientos diez"));
+        assertThat(SpanishNumbers.cardinal(821), equalTo("ochocientos veintiuno"));
+        assertThat(SpanishNumbers.cardinal(999), equalTo("novecientos noventa y nueve"));
     }
 }
