@@ -1,6 +1,6 @@
 package com.josketres.spanishnumbers;
 
-public class FirstPeriodFormat {
+class FirstPeriod {
 
     private static final String[] UNIT = {"cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"};
     private static final String[] TENS = {"diez", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"};
@@ -13,7 +13,7 @@ public class FirstPeriodFormat {
     private final int cents;
     private final int periodSize;
 
-    public FirstPeriodFormat(long number, int periodSize) {
+    public FirstPeriod(long number, int periodSize) {
         this.periodSize = periodSize;
 
         units = (int) number % 10;

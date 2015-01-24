@@ -1,10 +1,10 @@
 package com.josketres.spanishnumbers;
 
-class SecondPeriodFormat {
+class SecondPeriod {
 
     private final long number;
 
-    public SecondPeriodFormat(long number) {
+    public SecondPeriod(long number) {
         this.number = number;
     }
 
@@ -14,7 +14,7 @@ class SecondPeriodFormat {
         } else if (number == 1) {
             return "mil ";
         } else {
-            return new FirstPeriodFormat(number, 1).format() + " mil ";
+            return new FirstPeriod(number, 1).format() + " mil ";
         }
     }
 }

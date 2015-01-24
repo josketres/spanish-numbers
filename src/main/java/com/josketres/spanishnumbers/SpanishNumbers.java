@@ -2,6 +2,9 @@ package com.josketres.spanishnumbers;
 
 public class SpanishNumbers {
 
+    /**
+     * Return the cardinal name of the given number in spanish.
+     */
     public static String cardinal(long number) {
 
         DigitList digitList = new DigitList(number);
@@ -17,14 +20,14 @@ public class SpanishNumbers {
     }
 
     private static String thirdPeriod(long number, int periodSize) {
-        return new ThirdPeriodFormat(number, periodSize).format();
+        return new ThirdPeriod(number, periodSize).format();
     }
 
     private static String secondPeriod(long number) {
-        return new SecondPeriodFormat(number).format();
+        return new SecondPeriod(number).format();
     }
 
     private static String firstPeriod(long number, int periodSize) {
-        return new FirstPeriodFormat(number, periodSize).format();
+        return new FirstPeriod(number, periodSize).format();
     }
 }

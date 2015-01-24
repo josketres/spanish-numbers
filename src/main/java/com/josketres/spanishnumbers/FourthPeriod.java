@@ -1,6 +1,6 @@
 package com.josketres.spanishnumbers;
 
-public class FourthPeriod {
+class FourthPeriod {
     private final long number;
 
     public FourthPeriod(long number) {
@@ -9,6 +9,6 @@ public class FourthPeriod {
 
     public String format() {
 
-        return new SecondPeriodFormat(number).format();
+        return new SecondPeriod(number).format();
     }
 }

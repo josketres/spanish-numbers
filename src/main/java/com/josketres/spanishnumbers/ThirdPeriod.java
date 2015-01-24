@@ -1,10 +1,10 @@
 package com.josketres.spanishnumbers;
 
-public class ThirdPeriodFormat {
+class ThirdPeriod {
     private final long number;
     private final int periodSize;
 
-    public ThirdPeriodFormat(long number, int periodSize) {
+    public ThirdPeriod(long number, int periodSize) {
         this.number = number;
         this.periodSize = periodSize;
     }
@@ -17,7 +17,7 @@ public class ThirdPeriodFormat {
         } else if (number == 1) {
             return "un millón ";
         } else {
-            return new FirstPeriodFormat(number, 1).format() + " millones ";
+            return new FirstPeriod(number, 1).format() + " millones ";
         }
     }
 }
