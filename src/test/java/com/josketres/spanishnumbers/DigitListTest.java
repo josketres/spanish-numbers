@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.arrayContaining;
+import static org.hamcrest.Matchers.equalTo;
 
 public class DigitListTest {
 
@@ -26,9 +27,27 @@ public class DigitListTest {
 
         // 9 223 372 036 854 775 807
         // 6  5   4   3   2   1   0
-        
+
         assertThat(boxed(new DigitList(Long.MAX_VALUE).periods),
                 arrayContaining(807L, 775L, 854L, 36L, 372L, 223L, 9L));
+    }
+
+    @Test
+    public void period_size_of_1_is_1() {
+
+        // 0 000 000 000 000 000 001
+        // 6  5   4   3   2   1   0
+
+        assertThat(new DigitList(1).getPeriodSize(), equalTo(1));
+    }
+
+    @Test
+    public void period_size_of_1000_is_2() {
+
+        // 0 000 000 000 000 001 000
+        // 6  5   4   3   2   1   0
+
+        assertThat(new DigitList(1000).getPeriodSize(), equalTo(2));
     }
 
     private Long[] boxed(long[] longs) {

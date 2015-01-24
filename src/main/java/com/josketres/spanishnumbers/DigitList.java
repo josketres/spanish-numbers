@@ -27,4 +27,16 @@ class DigitList {
             periods[index] = Long.valueOf(String.valueOf(digits[i - 2]) + String.valueOf(digits[i - 1]) + String.valueOf(digits[i]));
         }
     }
+
+    public int getPeriodSize() {
+        int size = periods.length;
+        for (int i = size - 1; i >= 0; i--) {
+            if (periods[i] == 0) {
+                size--;
+            } else {
+                return size;
+            }
+        }
+        return size;
+    }
 }

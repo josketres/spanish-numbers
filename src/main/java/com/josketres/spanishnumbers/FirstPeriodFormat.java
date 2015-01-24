@@ -11,8 +11,10 @@ public class FirstPeriodFormat {
     private final int units;
     private final int tens;
     private final int cents;
+    private final int periodSize;
 
-    public FirstPeriodFormat(long number) {
+    public FirstPeriodFormat(long number, int periodSize) {
+        this.periodSize = periodSize;
 
         units = (int) number % 10;
         tens = (int) (number / 10) % 10;
@@ -54,6 +56,8 @@ public class FirstPeriodFormat {
         if (tens == 1 || tens == 2) {
             return "";
         } else if ((tens != 0 || cents != 0) && units == 0) {
+            return "";
+        } else if (periodSize > 1 && units == 0) {
             return "";
         } else {
             return UNIT[units];
