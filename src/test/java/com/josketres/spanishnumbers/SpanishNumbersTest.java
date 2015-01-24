@@ -149,11 +149,19 @@ public class SpanishNumbersTest {
     }
 
     @Test
-    public void test_cardinal_numbers_1000000_to_999999999() {
+    public void test_cardinal_numbers_1_000_000_to_999_999_999() {
 
         assertThat(cardinal(1000000), equalTo("un millón"));
         assertThat(cardinal(2000000), equalTo("dos millones"));
         assertThat(cardinal(500000000), equalTo("quinientos millones"));
         assertThat(cardinal(999999999), equalTo("novecientos noventa y nueve millones novecientos noventa y nueve mil novecientos noventa y nueve"));
+    }
+
+    @Test
+    public void test_cardinal_numbers_1000_000_000_to_999_999_999_999() {
+
+        assertThat(cardinal(1000000000), equalTo("mil millones"));
+        assertThat(cardinal(1200000000), equalTo("mil doscientos millones"));
+        assertThat(cardinal(999999999999L), equalTo("novecientos noventa y nueve mil novecientos noventa y nueve millones novecientos noventa y nueve mil novecientos noventa y nueve"));
     }
 }
