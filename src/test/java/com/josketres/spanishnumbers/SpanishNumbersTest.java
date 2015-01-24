@@ -164,4 +164,12 @@ public class SpanishNumbersTest {
         assertThat(cardinal(1200000000), equalTo("mil doscientos millones"));
         assertThat(cardinal(999999999999L), equalTo("novecientos noventa y nueve mil novecientos noventa y nueve millones novecientos noventa y nueve mil novecientos noventa y nueve"));
     }
+
+    @Test
+    public void test_cardinal_numbers_1_000_000_000_000_to_999_999_999_999_999() {
+
+        assertThat(cardinal(1000000000000L), equalTo("un billón"));
+        assertThat(cardinal(200000000120000L), equalTo("doscientos billones ciento veinte mil"));
+        assertThat(cardinal(999999999999999L), equalTo("novecientos noventa y nueve billones novecientos noventa y nueve mil novecientos noventa y nueve millones novecientos noventa y nueve mil novecientos noventa y nueve"));
+    }
 }

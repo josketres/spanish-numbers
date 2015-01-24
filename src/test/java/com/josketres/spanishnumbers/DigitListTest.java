@@ -38,7 +38,7 @@ public class DigitListTest {
         // 0 000 000 000 000 000 001
         // 6  5   4   3   2   1   0
 
-        assertThat(new DigitList(1).getPeriodSize(), equalTo(1));
+        assertThat(new DigitList(1).periodSize, equalTo(1));
     }
 
     @Test
@@ -47,7 +47,7 @@ public class DigitListTest {
         // 0 000 000 000 000 001 000
         // 6  5   4   3   2   1   0
 
-        assertThat(new DigitList(1000).getPeriodSize(), equalTo(2));
+        assertThat(new DigitList(1000).periodSize, equalTo(2));
     }
 
     private Long[] boxed(long[] longs) {

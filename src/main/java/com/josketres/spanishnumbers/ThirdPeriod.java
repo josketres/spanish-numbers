@@ -2,15 +2,15 @@ package com.josketres.spanishnumbers;
 
 class ThirdPeriod {
     private final long number;
-    private final int periodSize;
+    private final DigitList context;
 
-    public ThirdPeriod(long number, int periodSize) {
+    public ThirdPeriod(long number, DigitList context) {
         this.number = number;
-        this.periodSize = periodSize;
+        this.context = context;
     }
 
     public String format() {
-        if (number == 0 && periodSize > 3) {
+        if (number == 0 && context.periods[3] != 0) {
             return "millones ";
         } else if (number == 0) {
             return "";
