@@ -9,7 +9,8 @@ public class SpanishNumbers {
 
         DigitList context = new DigitList(number);
 
-        return (new FifthPeriod(context.periods[4], context.periodSize).format() +
+        return (new SixthPeriod(context.periods[5]).format() +
+                new FifthPeriod(context.periods[4], context.periodSize).format() +
                 new FourthPeriod(context.periods[3]).format() +
                 new ThirdPeriod(context.periods[2], context).format() +
                 new SecondPeriod(context.periods[1]).format() +
